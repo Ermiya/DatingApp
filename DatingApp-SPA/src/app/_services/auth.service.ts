@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl = environment.apiUrl + 'auth/'; //'http://localhost:5000/api/auth/';
+  baseUrl = environment.apiUrl + 'auth/'; // 'http://localhost:5000/api/auth/';
   jwtHelper = new JwtHelperService();
   decodedToken: any;
   constructor(private http: HttpClient) {}
