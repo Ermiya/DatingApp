@@ -27,24 +27,25 @@ export class MemberDetailComponent implements OnInit {
     });
     //this.loadUser();
 
-this.galleryOptions = [
+    this.galleryOptions = [
   {
     width: '500px',
     height: '500px',
     imagePercent: 100,
-    thumbnailsColumn: 4,
+    thumbnailsColumns: 4,
     imageAnimation: NgxGalleryAnimation.Slide,
     preview: false
   }
 ];
 
-  this.galleryImages = this.getImages();
+    this.galleryImages = this.getImages();
 }
 
 getImages() {
   const imageUrls = [];
 
-  for(let i = 0; i<this.user.photos.length; i++) {
+  // tslint:disable-next-line:prefer-for-of
+  for (let i = 0; i < this.user.photos.length; i++) {
     imageUrls.push({
       small: this.user.photos[i].url,
       medium: this.user.photos[i].url,
